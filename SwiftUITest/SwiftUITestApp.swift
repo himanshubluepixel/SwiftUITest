@@ -11,7 +11,8 @@ import SwiftUI
 struct SwiftUITestApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()          // owns Router, TabView, sheets (from Router.swift)
+                .themed()       // appearance + tint (from Theme.swift)
         }
     }
 }
